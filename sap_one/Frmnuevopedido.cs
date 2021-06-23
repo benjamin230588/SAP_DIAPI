@@ -37,7 +37,7 @@ namespace sap_one
             objdoc.DocDueDate = fecha;
             objdoc.CardCode = "C20000";
             //objdoc.DocumentStatus = SAPbobsCOM.BoStatus.bost_Open;
-
+            // PRUEBA
             objdoc.Lines.ItemCode = "1234kk";
             objdoc.Lines.Quantity = 5;
             objdoc.Lines.PriceAfterVAT = 100;
