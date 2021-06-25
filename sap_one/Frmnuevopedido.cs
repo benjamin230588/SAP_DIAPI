@@ -30,6 +30,7 @@ namespace sap_one
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string docentry;
             objdoc = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oOrders);
             string fecha1 = "14-06-2017";
             DateTime fecha = Convert.ToDateTime(fecha1);
@@ -39,19 +40,20 @@ namespace sap_one
             //objdoc.DocumentStatus = SAPbobsCOM.BoStatus.bost_Open;
             // PRUEBA
             objdoc.Lines.ItemCode = "1234kk";
-            objdoc.Lines.Quantity = 5;
+            objdoc.Lines.Quantity = 7;
             objdoc.Lines.PriceAfterVAT = 100;
 
             objdoc.Lines.Add();
             objdoc.Lines.ItemCode = "A00001";
-            objdoc.Lines.Quantity = 5;
+            objdoc.Lines.Quantity = 7;
             objdoc.Lines.PriceAfterVAT = 200;
 
 
             int estado = objdoc.Add();
             if (estado == 0)
             {
-                MessageBox.Show("Pedido creado");
+                docentry = objcompany.GetNewObjectKey();
+                MessageBox.Show("Pedido creado nro" + docentry);
             }
             else
             {
