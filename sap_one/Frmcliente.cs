@@ -117,7 +117,7 @@ namespace sap_one
         private void button4_Click(object sender, EventArgs e)
         {
             string codigo;
-            SAPbobsCOM.BusinessPartners   objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+            SAPbobsCOM.BusinessPartners   objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
             codigo = Convert.ToString(this.dataGridView1.CurrentRow.Cells["Codigo"].Value);
             if (objsocio.GetByKey(codigo))
             {

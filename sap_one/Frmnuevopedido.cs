@@ -31,7 +31,7 @@ namespace sap_one
         private void button1_Click(object sender, EventArgs e)
         {
             string docentry;
-            objdoc = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oOrders);
+            objdoc = (SAPbobsCOM.Documents)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oOrders);
             string fecha1 = "14-06-2017";
             DateTime fecha = Convert.ToDateTime(fecha1);
             objdoc.DocDate = fecha;

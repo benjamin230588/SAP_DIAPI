@@ -26,7 +26,7 @@ namespace sap_one
 
         private void button2_Click(object sender, EventArgs e)
         {
-            objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+            objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
             int correlativo = 0;
             int estado = 1;
             if (accion == 1)
@@ -211,7 +211,7 @@ namespace sap_one
         {
             int correlativo = Convert.ToInt32(dgdireccion.CurrentRow.Cells["index"].Value) - 1;
             int estado = 0;
-            objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+            objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
             if (objsocio.GetByKey(txtcodigo.Text))
             {
                 //objsocio.Addresses.SetCurrentLine(correlativo);

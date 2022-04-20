@@ -35,7 +35,7 @@ namespace sap_one
             int error = objcompany.Connect();
             if (error == 0)
             {
-                    objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+                    objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
                     objsocio.CardCode = "nuevobenja";
                     objsocio.CardName = "benjamin huaman";
                     objsocio.AdditionalID = "CE";
@@ -87,7 +87,7 @@ namespace sap_one
                 int error = objcompany.Connect();
                 if (error == 0)
                 {
-                    objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+                    objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
                     if(objsocio.GetByKey(codigo))
                     {
                         textBox1.Text = objsocio.CardCode;
@@ -145,7 +145,7 @@ namespace sap_one
                 int error = objcompany.Connect();
                 if (error == 0)
                 {
-                    objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+                    objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
                     if (objsocio.GetByKey(codigo))
                     {
                         objsocio.CardName = "cambio hoy";
@@ -205,7 +205,7 @@ namespace sap_one
                 int error = objcompany.Connect();
                 if (error == 0)
                 {
-                    objsocio = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+                    objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
                     if (objsocio.GetByKey(codigo))
                     {
 

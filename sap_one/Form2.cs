@@ -46,7 +46,7 @@ namespace sap_one
                     string fecha1 = "14-06-2017";
                     DateTime fecha =Convert.ToDateTime(fecha1) ;
 
-                    objdoc = objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oOrders);
+                    objdoc = (SAPbobsCOM.Documents)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oOrders);
                     objdoc.DocDate = fecha;
                     objdoc.DocDueDate = fecha;
                     objdoc.CardCode = "C20000";
