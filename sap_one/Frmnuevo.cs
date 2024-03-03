@@ -27,6 +27,11 @@ namespace sap_one
         private void button2_Click(object sender, EventArgs e)
         {
             objsocio = (SAPbobsCOM.BusinessPartners)objcompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.oBusinessPartners);
+            var cadena=objsocio.GetType();
+            //if (objsocio.GetType)
+            //{
+
+            //}
             int correlativo = 0;
             int estado = 1;
             if (accion == 1)

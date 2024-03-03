@@ -29,7 +29,11 @@ namespace sap_one
                 // en el ejemplo del sdk la tabla del objeto(base de datos) solo tiene prooiedades de los campos
                 // de la tabla no de las tablas detalle
                 // como accedo al detalle de las tablas observando la estructura del objeto en el sdk
-            
+                //SAPbobsCOM.Company objcompany23 = (SAPbobsCOM.Company)new Object() ;
+                //if (objcompany23 == null)
+                //{
+
+                //}
                 SAPbobsCOM.Company objcompany = new SAPbobsCOM.Company();
                 objcompany.DbServerType = SAPbobsCOM.BoDataServerTypes.dst_MSSQL2012;
                 objcompany.Server = "LAPTOP-ICLC5GJE";

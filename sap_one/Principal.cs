@@ -47,5 +47,13 @@ namespace sap_one
 
             }
         }
+
+        private void tipoCambioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTIPOCAMBIO frmcli = new FormTIPOCAMBIO(objcompany);
+            frmcli.MdiParent = this;
+            frmcli.Show();
+            
+        }
     }
 }
