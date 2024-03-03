@@ -237,11 +237,18 @@ namespace sap_one
             //    MessageBox.Show(objcompany.GetLastErrorDescription());
             //}
 
-            SAPbobsCOM.BPAddresses objdire = null;
-            objdire = objsocio.Addresses;
-            objdire.SetCurrentLine(correlativo);
-            objdire.Delete();
-            estado=  objsocio.Update();
+            //SAPbobsCOM.BPAddresses objdire = null;
+            //objdire = objsocio.Addresses;
+            //objdire.SetCurrentLine(correlativo);
+            //objdire.Delete();
+            //estado=  objsocio.Update();
+
+
+            //SAPbobsCOM.BPAddresses objdire = null;
+            objsocio.Addresses.SetCurrentLine(1);
+            objsocio.Addresses.Delete();
+            //objdire.Delete();
+            estado = objsocio.Update();
 
             if (estado == 0)
             {
