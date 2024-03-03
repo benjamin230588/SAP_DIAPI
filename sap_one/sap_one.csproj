@@ -133,6 +133,12 @@
     <Compile Include="FrmPedido.Designer.cs">
       <DependentUpon>FrmPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="HANADIAPICONEXION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HANADIAPICONEXION.Designer.cs">
+      <DependentUpon>HANADIAPICONEXION.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPedido.resx">
       <DependentUpon>FrmPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HANADIAPICONEXION.resx">
+      <DependentUpon>HANADIAPICONEXION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
